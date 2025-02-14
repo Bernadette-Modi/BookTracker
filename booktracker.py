@@ -4,3 +4,8 @@ class Book:
         self.author = author
         self.genre = genre
         self.status = status
+
+    def mark_as_read(self):
+        self.status = "Completed"
+    
+    
