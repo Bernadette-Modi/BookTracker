@@ -8,4 +8,7 @@ class Book:
     def mark_as_read(self):
         self.status = "Completed"
     
+    def mark_as_reading(self):
+        self.status = "Currently Reading"
+
     
