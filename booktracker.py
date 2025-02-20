@@ -34,3 +34,13 @@ def view_books():
             print(f"{idx}. {book}")
         print()
 
+def remove_book():
+    view_books()
+    if book_list:
+        try:
+            index = int(input("Enter the number of the book to remove: "))
+            removed_book = book_list.pop(index)
+            print(f"\n'{removed_book.title}' removed from your list.\n")
+        except (IndexError, ValueError):
+            print("\nInvalid selection.\n")
+            
