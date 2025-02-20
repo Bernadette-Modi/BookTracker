@@ -21,7 +21,8 @@ def add_book():
     title = input("Enter book title: ")
     author = input("Enter author: ")
     genre = input("Enter genre: ")
-    book = Book(title, author, genre)
+    status = input("Enter status: ")
+    book = Book(title, author, genre, status)
     book_list.append(book)
     print(f"\n'{title} added to your book list!\n")
 
@@ -38,7 +39,7 @@ def remove_book():
     view_books()
     if book_list:
         try:
-            index = int(input("Enter the number of the book to remove: "))
+            index = int(input("Enter the number of the book to remove: ")) - 1
             removed_book = book_list.pop(index)
             print(f"\n'{removed_book.title}' removed from your list.\n")
         except (IndexError, ValueError):
@@ -57,6 +58,8 @@ def update_status():
                 book.mark_as_reading()
             else:
                 print("\nInvalid choice.\n")
+        except ValueError:
+            print("\nInvalid input. Please enter a number.\n")
 
 def main_menu():
     while True:
@@ -83,5 +86,5 @@ def main_menu():
             print("\nInvalid choice. Please try again.\n")
 
 if __name__ == "__main__":
-    main menu()
+    main_menu()
 
