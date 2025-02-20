@@ -67,4 +67,20 @@ def main_menu():
         print("4. Update Status")
         print("5. Quit")
         choice = input("\nChoose an option: ")
-           
+
+        if choice == '1':
+            add_book()
+        elif choice == '2':
+            view_books()
+        elif choice == '3':
+            remove_book()
+        elif choice == '4':
+            update_status()
+        elif choice == '5':
+            print("\nGoodbye! Happy reading! 📚")
+            break
+        else:
+            print("\nInvalid choice. Please try again.\n")
+
+   
+
