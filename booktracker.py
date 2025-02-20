@@ -24,4 +24,13 @@ def add_book():
     book = Book(title, author, genre)
     book_list.append(book)
     print(f"\n'{title} added to your book list!\n")
-    
+
+def view_books():
+    if not book_list: 
+        print("\nYour book list is empty.\n")
+    else:
+        print("\nYour Book List: ")
+        for idx, book in enumerate(book_list, start=1):
+            print(f"{idx}. {book}")
+        print()
+
