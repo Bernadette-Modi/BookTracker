@@ -57,4 +57,14 @@ def update_status():
                 book.mark_as_reading()
             else:
                 print("\nInvalid choice.\n")
-                
+
+def main_menu():
+    while True:
+        print("\nBook Tracker Menu: ")
+        print("1. Add Book")
+        print("2. View Books")
+        print("3. Remove Book")
+        print("4. Update Status")
+        print("5. Quit")
+        choice = input("\nChoose an option: ")
+           
