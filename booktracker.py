@@ -43,4 +43,18 @@ def remove_book():
             print(f"\n'{removed_book.title}' removed from your list.\n")
         except (IndexError, ValueError):
             print("\nInvalid selection.\n")
-            
+
+def update_status():
+    view_books()
+    if book_list:
+        try:
+            index = int(input("Enter the number of the book to update: ")) - 1
+            book = book_list[index]
+            choice = input("Mark as (1) Completed or (2) Currently Reading? ")
+            if choice == "1":
+                book.mark_as_read()
+            elif choice == "2":
+                book.mark_as_reading()
+            else:
+                print("\nInvalid choice.\n")
+                
