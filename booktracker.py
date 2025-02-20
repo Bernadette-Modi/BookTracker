@@ -15,3 +15,13 @@ class Book:
         return f"{self.title} by {self.author} [{self.status}]"
 
     
+book_list = []
+
+def add_book():
+    title = input("Enter book title: ")
+    author = input("Enter author: ")
+    genre = input("Enter genre: ")
+    book = Book(title, author, genre)
+    book_list.append(book)
+    print(f"\n'{title} added to your book list!\n")
+    
